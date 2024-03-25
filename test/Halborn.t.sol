@@ -148,11 +148,11 @@ contract HalbornTest is Test {
             restricted functions that EVE is now able to call. 
             Next each vulnerability is explained and tested
 
-            - VULN02-01: Abbility to withdraw all ETH of NFT contract.
-            - VULN02-02: Possibility to set a new price for the NFTs.
+            - VULN-02-01: Ability to withdraw all ETH of NFT contract.
+            - VULN-02-02: Possibility to set a new price for the NFTs.
         */ 
 
-        // ====== VULN02-01 ====== // 
+        // ====== VULN-02-01 ====== // 
         //The balance of the smart contract is still 3 ethers
         //EVE (as is the new owner) is able to withdraw everything 
         assert(address(nft).balance == 3 ether);
@@ -160,7 +160,7 @@ contract HalbornTest is Test {
         assert(address(EVE).balance == 3 ether);
 
         
-        // ====== VULN02-02 ====== // 
+        // ====== VULN-02-02 ====== // 
         //The price of each NFT is 1 ether
         //EVE (as is the new owner) is able to change it 
         //We deleted the require statement of the AttackerHalbornNFT contract
@@ -197,7 +197,7 @@ contract HalbornTest is Test {
             there are (previously) restricted functions that EVE is now able to call. 
             Next each vulnerability is explained and tested
 
-            - VULN03-01: Abbility to mint unlimited tokens.
+            - VULN03-01: Ability to mint unlimited tokens.
             - VULN03-02: Possibility of burning tokens of other users.
             - VULN03-03: DDoS by setting halbornLoans to any address.
 
@@ -243,7 +243,7 @@ contract HalbornTest is Test {
             Next, each new vulnerability that was 
             introduced is explained and tested
 
-            - VULN04-01: Abbility to mint unlimited tokens.
+            - VULN04-01: Ability to mint unlimited tokens.
             - VULN04-02: Possibility of burning tokens of other users.
             - VULN04-03: Withdraw collateral of other people (steal their NFTs).
 

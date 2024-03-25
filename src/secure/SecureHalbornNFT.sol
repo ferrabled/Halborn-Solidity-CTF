@@ -38,11 +38,11 @@ contract SecureHalbornNFT is
         price = price_;
     }
 
-    function setMerkleRoot(bytes32 merkleRoot_) public {
+    function setMerkleRoot(bytes32 merkleRoot_) public onlyOwner{
         merkleRoot = merkleRoot_;
     }
 
-    function mintAirdrops(uint256 id, bytes32[] calldata merkleProof) external {
+    function mintAirdrops(uint256 id, bytes32[] calldata merkleProof) external onlyOwner{
         require(_exists(id), "Token already minted");
 
         bytes32 node = keccak256(abi.encodePacked(msg.sender, id));
